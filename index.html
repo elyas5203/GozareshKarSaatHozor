@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود کارمندان</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>سیستم حضور و غیاب</h2>
+        <form id="login-form" action="api/login.php" method="POST">
+            <div class="form-group">
+                <label for="employee">انتخاب کارمند:</label>
+                <select id="employee" name="employee_id" required>
+                    <!-- Employee list will be populated here by PHP -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">رمز عبور:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">ورود</button>
+            <p id="error-message" class="error-message"></p>
+        </form>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
